@@ -402,6 +402,9 @@ img {
 }
 .portfolio-list .link {
   transition: box-shadow var(--animation);
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .portfolio-list .link:hover,
 .portfolio-list .link:focus {
