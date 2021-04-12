@@ -460,11 +460,12 @@ img {
   font-size: 18px;
   line-height: 1.56;
   transition: transform var(--animation);
-
+  overflow: auto;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
 }
-.portfolio-item .link:hover .portfolio-card-text {
+.portfolio-item .link:hover .portfolio-card-text,
+.portfolio-item .link:focus .portfolio-card-text {
   transform: translateY(-100%);
 }
 .portfolio-title {
@@ -543,8 +544,12 @@ footer .social-icons-link:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: transform var(--animation), opacity var(--animation);
+  transition: opacity var(--animation);
   background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -561,6 +566,10 @@ footer .social-icons-link:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+  opacity: 0.7;
+}
 .btn-close {
   position: absolute;
   right: 8px;
@@ -571,16 +580,14 @@ footer .social-icons-link:focus {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  transition: fill var(--animation), background-color var(--animation);
 
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.backdrop.is-hidden {
-  /* visibility: hidden; */
-  opacity: 0;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(1.25);
-  opacity: 0.7;
+.btn-close:hover,
+.btn-close:focus {
+  background-color: var(--accent-color);
+  fill: var(--white-color);
+  outline: none;
 }
