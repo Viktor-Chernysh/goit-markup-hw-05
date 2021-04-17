@@ -386,30 +386,53 @@
           <use href="./images/icons/sprite1.svg#icon-close-btn"></use>
         </svg>
       </button>
-      <form class="form">
+      <form class="form" autocomplete="off">
         <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
 
        <div class="form-field">
-          <input type="text" class="form-input" name="client-name" id="client-name">
+          <div class="form-wrap">
+            <input type="text" class="form-input" name="client-name" id="client-name">
+            <svg class="form-icon">
+              <use href="./images/icons/sprite1.svg#icon-person-black"></use>
+            </svg>
+          </div>
           <label for="client-name" class="form-lable">Имя</label>
        </div>
        <div class="form-field">
-        <input type="tel" class="form-input" name="client-phone" id="client-phone">
-        <label for="client-phone" class="form-lable">Телефон</label>
+        <div class="form-wrap">
+          <input type="tel" class="form-input" name="client-phone" id="client-phone">
+          <svg class="form-icon">
+            <use href="./images/icons/sprite1.svg#icon-phone-black"></use>
+          </svg>
+        </div>
+        <label for="client-phone" class="form-lable">Телефон</label>     
        </div>
         <div class="form-field">
+          <div class="form-wrap">
           <input type="email" class="form-input" name="client-mail" id="client-mail">
+          <svg class="form-icon">
+            <use href="./images/icons/sprite1.svg#icon-email-black"></use>
+          </svg>
+          </div>
           <label for="client-mail" class="form-lable">Почта</label>
         </div>
         <div class="form-field textarea">
           <textarea name="comment" class="form-textarea" placeholder="Введите текст" id="comment" cols="20" rows="5"></textarea>
           <label for="comment" class="form-lable">Комментарий</label>
         </div>
-        <div class="agreement">
-          <input type="checkbox" name="agreement" value="agree" id="agreement">
-          <label for="agreement"><span class="agreement-text">Соглашаюсь с рассылкой и принимаю</span></label>
+               
+          <label class="agreement">
+            <span class="agreement-text">
+            <input type="checkbox" class="checkbox" name="agreement" value="agree">
+            
+              <svg class="icon-check">
+                <use href="./images/icons/sprite1.svg#icon-check"></use>
+              </svg>
+            
+            Соглашаюсь с рассылкой и принимаю</span>
+          </label>
           <a href="" class="agreement-link">Условия договора</a>
-        </div>
+        
         
 
         <button type="submit" class="hero-button">Отправить</button>
